@@ -1,11 +1,13 @@
 package es.cristina.proyecto1.Proyecto1.rest;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-//Anotacion de la clase de java RestController que indica que esta clase (MiPrimerRestController) será un controlador que
-//maneja solicitudes web
-@RestController
+//Anotacion de la clase de java Controller para indicar a esta clase sera un controlador que
+//maneja solicitudes web a la antigua con archivos html
+//Recordatorio poner en el pom la dependencia del motor de plantilla adecuado con su version correspondiente
+@Controller
+
 public class MiPrimerRestController {
 
 
@@ -14,6 +16,7 @@ public class MiPrimerRestController {
     //para comprobar que funciona, ejecutamos la clase y ponemos en el navegador localhost:8080, que es el puerto Tombcat
     @GetMapping("/")
     public String saludo(){
-        return "Hola Spring Boot";
+        //nombre del html
+        return "index";
     }
 }
